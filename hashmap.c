@@ -48,7 +48,6 @@ void insertMap(HashMap * map, char * key, void * value) {
     //{
         while( buckets[index])
         {
-            printf("test\n");
             index++;
             if (index >= map->capacity) return;
         }
