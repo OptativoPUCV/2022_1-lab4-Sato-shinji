@@ -45,6 +45,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     
     while(map->buckets[index] || map->buckets[index]->key)
     {
+        printf("test\n");
         index++;
         if (index >= map->capacity) return;
     }
