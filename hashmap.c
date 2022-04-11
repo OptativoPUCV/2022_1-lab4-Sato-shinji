@@ -103,8 +103,14 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+    long index = 0;
+    while(!map->buckets[index])
+    {
+        index++;
+        if (index >= map->capacity) return NULL;
+    }
+    map->current = index;
+    return map->buckets[index];
 }
 
 Pair * nextMap(HashMap * map) {
