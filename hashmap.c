@@ -121,5 +121,6 @@ Pair * nextMap(HashMap * map) {
         if (index >= map->capacity) index = 0;
     }
     map->current = index;
+    printf("%ld",index);
     return map->buckets[index];
 }
