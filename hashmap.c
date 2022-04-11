@@ -80,7 +80,6 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-    Pair *par;
     Pair **buckets = map->buckets;
     long index = hash(key, map->capacity);
 
