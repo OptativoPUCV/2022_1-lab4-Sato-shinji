@@ -106,6 +106,7 @@ Pair * firstMap(HashMap * map) {
     long index = 0;
     while(!map->buckets[index])
     {
+        if (map->buckets[index]->key) break;
         index++;
         if (index >= map->capacity) return NULL;
     }
