@@ -44,6 +44,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair **buckets = map->buckets;
     long index = hash(key, map->capacity);
 
+    if(map->size == map->capacity) enlarge(map);
+
     while(buckets[index])
     {
         if (!buckets[index]->key || !strcmp(buckets[index]->key, key)) return;
