@@ -103,3 +103,8 @@ hashmap.c:49:48: error: '*(buckets + (sizetype)((unsigned int)index * 4u))' is a
                                                 ->
 Compilation failed
 9b7ef29
+Sun Apr 10 21:24:42 HSP 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+3bf33f3
