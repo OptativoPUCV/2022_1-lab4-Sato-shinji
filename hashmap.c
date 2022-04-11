@@ -118,7 +118,7 @@ Pair * nextMap(HashMap * map) {
     while(!map->buckets[index] || !map->buckets[index]->key)
     {
         index++;
-        if (index >= map->capacity) return NULL;
+        if (index >= map->capacity) index = 0;
     }
     map->current = index;
     return map->buckets[index];
