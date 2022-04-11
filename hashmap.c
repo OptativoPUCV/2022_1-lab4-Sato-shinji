@@ -118,9 +118,8 @@ Pair * nextMap(HashMap * map) {
     while(!map->buckets[index] || !map->buckets[index]->key)
     {
         index++;
-        if (index >= map->capacity) index = 0;
+        if (index >= map->capacity) return NULL;
     }
     map->current = index;
-    printf("%ld",index);
     return map->buckets[index];
 }
