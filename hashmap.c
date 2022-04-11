@@ -43,13 +43,13 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair *new = createPair(key, value);
     long index = hash(key, map->capacity);
 
+    if (index > map->capacity) enlarge(map);
     
     while(map->buckets[index] || map->buckets[index]->key)
     {
         index++;
     }
 
-    if (index > map->capacity) enlarge(map);
 
     map->buckets[index] = new;
     map->current = index;
