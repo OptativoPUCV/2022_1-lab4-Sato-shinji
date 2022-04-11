@@ -50,6 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
         index++;
     }
 
+    if (index > map->capacity) enlarge(map);
 
     map->buckets[index] = new;
     map->current = index;
