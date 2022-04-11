@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     {
         if (!buckets[index]->key || !strcmp(buckets[index]->key, key)) return;
         index++;
-        if (index >= map->capacity) return;
+        if (index >= map->capacity) index = 0;
     }
 
 
