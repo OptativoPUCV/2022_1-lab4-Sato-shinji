@@ -67,3 +67,13 @@ Sun Apr 10 21:21:09 HSP 2022:
  1 file changed, 3 insertions(+)
  tests:  0|0
 b2d76ad
+Sun Apr 10 21:22:09 HSP 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:48:16: error: used struct type value where scalar is required
+         while( *(map->buckets)[index] || *(map->buckets)[index]->key)
+                ^
+Compilation failed
+d499021
