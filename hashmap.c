@@ -41,11 +41,12 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) {
     Pair *new = createPair(key, value);
+    Pair **buckets = map->buckets;
     long index = hash(key, map->capacity);
     
-    if (map->buckets)
+    if (buckets)
     {
-        while( (map->buckets)[index] || (map->buckets)[index]->key)
+        while( buckets[index] || buckets[index]->key)
         {
             printf("test\n");
             index++;
