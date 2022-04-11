@@ -45,7 +45,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     
     if (map->buckets)
     {
-        while( *(map->buckets)[index] || *(map->buckets)[index]->key)
+        while( (map->buckets)[index] || *(map->buckets)[index]->key)
         {
             printf("test\n");
             index++;

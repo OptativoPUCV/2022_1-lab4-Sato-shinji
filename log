@@ -77,3 +77,8 @@ hashmap.c:48:16: error: used struct type value where scalar is required
                 ^
 Compilation failed
 d499021
+Sun Apr 10 21:22:36 HSP 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+757374a
