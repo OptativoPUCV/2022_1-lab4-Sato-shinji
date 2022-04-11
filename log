@@ -92,3 +92,14 @@ Sun Apr 10 21:24:00 HSP 2022:
  1 file changed, 3 insertions(+), 2 deletions(-)
  tests:  0|0
 dcbc143
+Sun Apr 10 21:24:13 HSP 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:49:48: error: '*(buckets + (sizetype)((unsigned int)index * 4u))' is a pointer; did you mean to use '->'?
+         while( buckets[index] || buckets[index].key)
+                                                ^
+                                                ->
+Compilation failed
+9b7ef29
