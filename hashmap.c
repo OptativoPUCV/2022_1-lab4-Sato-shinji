@@ -104,9 +104,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
     long index = 0;
-    while(!map->buckets[index])
+    while(!map->buckets[index] || !map->buckets[index]->key)
     {
-        if (!map->buckets[index]->key) break;
         index++;
         if (index >= map->capacity) return NULL;
     }
